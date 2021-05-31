@@ -17,6 +17,7 @@ import { HeadingComponent } from './heading/heading.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutDirective } from './about/about.directive';
+import { MatCarouselModule } from './mat-carousel/mat-carousel.module';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AboutDirective } from './about/about.directive';
     ScrollModule,
     FlexLayoutModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

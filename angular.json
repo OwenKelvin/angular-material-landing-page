@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "piescientific": {
+    "ng-material-landing-page": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/piescientific",
+            "outputPath": "dist/ng-material-landing-page",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "piescientific:build:production"
+              "browserTarget": "ng-material-landing-page:build:production"
             },
             "development": {
-              "browserTarget": "piescientific:build:development"
+              "browserTarget": "ng-material-landing-page:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "piescientific:build"
+            "browserTarget": "ng-material-landing-page:build"
           }
         },
         "test": {
@@ -113,7 +113,7 @@
       }
     }
   },
-  "defaultProject": "piescientific",
+  "defaultProject": "ng-material-landing-page",
   "cli": {
     "defaultCollection": "@angular-eslint/schematics"
   }

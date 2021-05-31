@@ -11,188 +11,36 @@
 		</div>
 
 		<div class="owl-carousel owl-theme">
-			<div id="scroll-item" class="item" [appAbout]>
-				<mat-card>
-					<img mat-card-image src="assets/img/6.jpg">
-					<mat-card-content>
-						<a href="#blog">
-							<h5 class="mat-headline" [ngStyle.sm]="{'font-size': '16px'}">Article Title #1</h5>
-						</a>
-						<p class="mat-subheading-2" [ngStyle.sm]="{'font-size': '12px'}">
-							Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.
-						</p>
-
-					</mat-card-content>
-				</mat-card>
+			<div class="demo-carousel" [style.height]="parentHeight">
+				<app-mat-carousel #matCarousel [timings]="timings" [autoplay]="autoplay" [interval]="interval" [loop]="loop"
+					[hideArrows]="hideArrows" [hideIndicators]="hideIndicators" [color]="color" [maxWidth]="maxWidth"
+					[proportion]="proportion" [useKeyboard]="useKeyboard" [useMouseWheel]="useMouseWheel"
+					[orientation]="orientation" [slides]="slides" [maintainAspectRatio]="maintainAspectRatio"
+					[slideHeight]="slideHeight">
+					<ng-container>
+						<app-mat-carousel-slide #matCarouselSlide *ngFor="let slide of slidesList; let i = index"
+							image="assets/demo.png" [overlayColor]="overlayColor" [hideOverlay]="hideOverlay">
+		
+							<div id="scroll-item" class="item" [appAbout]>
+								<mat-card>
+									<img mat-card-image src="assets/img/6.jpg">
+									<mat-card-content>
+										<a href="#blog">
+											<h5 class="mat-headline" [ngStyle.sm]="{'font-size': '16px'}">Article Title #1</h5>
+										</a>
+										<p class="mat-subheading-2" [ngStyle.sm]="{'font-size': '12px'}">
+											Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.
+										</p>
+		
+									</mat-card-content>
+								</mat-card>
+							</div>
+						</app-mat-carousel-slide>
+					</ng-container>
+		
+				</app-mat-carousel>
 			</div>
-			<div id="scroll-item" class="item" [appAbout]>
-				<mat-card>
-					<img mat-card-image src="assets/img/1.jpg">
-					<mat-card-content>
-						<a href="#blog">
-							<h5 class="mat-headline" [ngStyle.sm]="{'font-size': '16px'}">Article Title #2</h5>
-						</a>
-						<p class="mat-subheading-2" [ngStyle.sm]="{'font-size': '12px'}">
-							Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.
-						</p>
-
-					</mat-card-content>
-				</mat-card>
-			</div>
-			<div id="scroll-item" class="item" [appAbout]>
-				<mat-card>
-					<img mat-card-image src="assets/img/2.jpg">
-					<mat-card-content>
-						<a href="#blog">
-							<h5 class="mat-headline" [ngStyle.sm]="{'font-size': '16px'}">Article Title #3</h5>
-						</a>
-						<p class="mat-subheading-2" [ngStyle.sm]="{'font-size': '12px'}">
-							Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.
-						</p>
-
-					</mat-card-content>
-				</mat-card>
-			</div>
-			<div id="scroll-item" class="item" [appAbout]>
-				<mat-card>
-					<img mat-card-image src="assets/img/3.jpg">
-					<mat-card-content>
-						<a href="#blog">
-							<h5 class="mat-headline" [ngStyle.sm]="{'font-size': '16px'}">Article Title #4</h5>
-						</a>
-						<p class="mat-subheading-2" [ngStyle.sm]="{'font-size': '12px'}">
-							Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.
-						</p>
-
-					</mat-card-content>
-				</mat-card>
-			</div>
-			<div id="scroll-item" class="item" [appAbout]>
-				<mat-card>
-					<img mat-card-image src="assets/img/4.jpg">
-					<mat-card-content>
-						<a href="#blog">
-							<h5 class="mat-headline" [ngStyle.sm]="{'font-size': '16px'}">Article Title #5</h5>
-						</a>
-						<p class="mat-subheading-2" [ngStyle.sm]="{'font-size': '12px'}">
-							Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.
-						</p>
-
-					</mat-card-content>
-				</mat-card>
-			</div>
-			<div id="scroll-item" class="item" [appAbout]>
-				<mat-card>
-					<img mat-card-image src="assets/img/5.jpg">
-					<mat-card-content>
-						<a href="#blog">
-							<h5 class="mat-headline" [ngStyle.sm]="{'font-size': '16px'}">Article Title #6</h5>
-						</a>
-						<p class="mat-subheading-2" [ngStyle.sm]="{'font-size': '12px'}">
-							Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.
-						</p>
-
-					</mat-card-content>
-				</mat-card>
-			</div>
-			<div id="scroll-item" class="item" [appAbout]>
-				<mat-card>
-					<img mat-card-image src="assets/img/6.jpg">
-					<mat-card-content>
-						<a href="#blog">
-							<h5 class="mat-headline" [ngStyle.sm]="{'font-size': '16px'}">Article Title #7</h5>
-						</a>
-						<p class="mat-subheading-2" [ngStyle.sm]="{'font-size': '12px'}">
-							Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.
-						</p>
-
-					</mat-card-content>
-				</mat-card>
-			</div>
-			<div id="scroll-item" class="item" [appAbout]>
-				<mat-card>
-					<img mat-card-image src="assets/img/1.jpg">
-					<mat-card-content>
-						<a href="#blog">
-							<h5 class="mat-headline" [ngStyle.sm]="{'font-size': '16px'}">Article Title #8</h5>
-						</a>
-						<p class="mat-subheading-2" [ngStyle.sm]="{'font-size': '12px'}">
-							Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.
-						</p>
-
-					</mat-card-content>
-				</mat-card>
-			</div>
-			<div id="scroll-item" class="item" [appAbout]>
-				<mat-card>
-					<img mat-card-image src="assets/img/2.jpg">
-					<mat-card-content>
-						<a href="#blog">
-							<h5 class="mat-headline" [ngStyle.sm]="{'font-size': '16px'}">Article Title #9</h5>
-						</a>
-						<p class="mat-subheading-2" [ngStyle.sm]="{'font-size': '12px'}">
-							Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.
-						</p>
-
-					</mat-card-content>
-				</mat-card>
-			</div>
-			<div id="scroll-item" class="item" [appAbout]>
-				<mat-card>
-					<img mat-card-image src="assets/img/3.jpg">
-					<mat-card-content>
-						<a href="#blog">
-							<h5 class="mat-headline" [ngStyle.sm]="{'font-size': '16px'}">Article Title #10</h5>
-						</a>
-						<p class="mat-subheading-2" [ngStyle.sm]="{'font-size': '12px'}">
-							Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.
-						</p>
-
-					</mat-card-content>
-				</mat-card>
-			</div>
-			<div id="scroll-item" class="item" [appAbout]>
-				<mat-card>
-					<img mat-card-image src="assets/img/4.jpg">
-					<mat-card-content>
-						<a href="#blog">
-							<h5 class="mat-headline" [ngStyle.sm]="{'font-size': '16px'}">Article Title #11</h5>
-						</a>
-						<p class="mat-subheading-2" [ngStyle.sm]="{'font-size': '12px'}">
-							Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.
-						</p>
-
-					</mat-card-content>
-				</mat-card>
-			</div>
-			<div id="scroll-item" class="item" [appAbout]>
-				<mat-card>
-					<img mat-card-image src="assets/img/5.jpg">
-					<mat-card-content>
-						<a href="#blog">
-							<h5 class="mat-headline" [ngStyle.sm]="{'font-size': '16px'}">Article Title #12</h5>
-						</a>
-						<p class="mat-subheading-2" [ngStyle.sm]="{'font-size': '12px'}">
-							Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.
-						</p>
-
-					</mat-card-content>
-				</mat-card>
-			</div>
-			<div id="scroll-item" class="item" [appAbout]>
-				<mat-card>
-					<img mat-card-image src="assets/img/6.jpg">
-					<mat-card-content>
-						<a href="#blog">
-							<h5 class="mat-headline" [ngStyle.sm]="{'font-size': '16px'}">Article Title #13</h5>
-						</a>
-						<p class="mat-subheading-2" [ngStyle.sm]="{'font-size': '12px'}">
-							Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.
-						</p>
-
-					</mat-card-content>
-				</mat-card>
-			</div>
+		
 		</div>
 		<div fxLayout="row" fxLayoutAlign="center center">
 			<button class="customPrevBtn" mat-raised-button color="primary">Prev</button>

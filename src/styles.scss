@@ -1,19 +1,15 @@
 @import '~@angular/material/theming';
+@import 'styles/animations/animations.scss';
+@import 'styles/owl.carousel.scss';
+
+$ng-primary: mat-palette($mat-grey, 50, 700, 100);
+$ng-accent:  mat-palette($mat-orange, A700);
+$ng-warn:    mat-palette($mat-red, 500);
+$ng-theme: mat-light-theme($ng-primary, $ng-accent, $ng-warn);
 
 @include mat-core();
+@include angular-material-theme($ng-theme);
 
-$nglp-primary: mat-palette($mat-grey, 50, 700, 100);
-
-$nglp-accent:  mat-palette($mat-orange, A700);
-
-$nglp-warn:    mat-palette($mat-red, 500);
-
-
-$nglp-theme: mat-light-theme($nglp-primary, $nglp-accent, $nglp-warn);
-
-@include angular-material-theme($nglp-theme);
-
-@import 'animations/nglp-animations.scss';
 
 html {
   scroll-behavior: smooth;
@@ -35,17 +31,17 @@ section{
 /* ------ icons -------- */
 
 .material-icons {
-  color: mat-color($nglp-accent, 700);
+  color: mat-color($ng-accent, 700);
 }
 
 .text-muted{
-  color: mat-color($nglp-accent, A700);
+  color: mat-color($ng-accent, A700);
 }
 
 /* ------ navigation -------- */
 
 .navigation-toolbar {
-  background-color: mat-color($nglp-primary);
+  background-color: mat-color($ng-primary);
 }
 
 /* ------ mobile logo -------- */
@@ -62,9 +58,9 @@ section{
 }
 
 .about-hover-effect .mat-card{
-  background-color: mat-color($nglp-accent, 100);
+  background-color: mat-color($ng-accent, 100);
 }
 
 .about-hover-effect i{
-  color: mat-color($nglp-accent, A700);
+  color: mat-color($ng-accent, A700);
 }
