@@ -10,41 +10,41 @@
 			</div>
 		</div>
 
-		<div class="owl-carousel owl-theme">
-			<div class="demo-carousel" [style.height]="parentHeight">
-				<app-mat-carousel #matCarousel [timings]="timings" [autoplay]="autoplay" [interval]="interval" [loop]="loop"
-					[hideArrows]="hideArrows" [hideIndicators]="hideIndicators" [color]="color" [maxWidth]="maxWidth"
-					[proportion]="proportion" [useKeyboard]="useKeyboard" [useMouseWheel]="useMouseWheel"
-					[orientation]="orientation" [slides]="slides" [maintainAspectRatio]="maintainAspectRatio"
-					[slideHeight]="slideHeight">
-					<ng-container>
-						<app-mat-carousel-slide #matCarouselSlide *ngFor="let slide of slidesList; let i = index"
-							image="assets/demo.png" [overlayColor]="overlayColor" [hideOverlay]="hideOverlay">
-		
-							<div id="scroll-item" class="item" [appAbout]>
-								<mat-card>
-									<img mat-card-image src="assets/img/6.jpg">
-									<mat-card-content>
-										<a href="#blog">
-											<h5 class="mat-headline" [ngStyle.sm]="{'font-size': '16px'}">Article Title #1</h5>
-										</a>
-										<p class="mat-subheading-2" [ngStyle.sm]="{'font-size': '12px'}">
-											Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.
-										</p>
-		
-									</mat-card-content>
-								</mat-card>
-							</div>
-						</app-mat-carousel-slide>
-					</ng-container>
-		
-				</app-mat-carousel>
-			</div>
-		
+		<div class="demo-carousel" [style.height]="parentHeight" (mouseenter)='hideOverlay = true' (mouseleave)='hideOverlay = false'>
+			<app-mat-carousel #matCarousel [timings]="timings" [autoplay]="autoplay" [interval]="interval" [loop]="loop"
+				[hideArrows]="hideArrows" [hideIndicators]="hideIndicators" [color]="color" [maxWidth]="maxWidth"
+				[proportion]="proportion" [useKeyboard]="useKeyboard" [useMouseWheel]="useMouseWheel"
+				[orientation]="orientation" [slides]="slides" [maintainAspectRatio]="maintainAspectRatio"
+				[slideHeight]="slideHeight">
+				<ng-container *ngFor='let blog of blogs ;let i = index'>
+					<app-mat-carousel-slide #matCarouselSlide [image]="blog.src" [overlayColor]="overlayColor"
+						[hideOverlay]="hideOverlay">
+
+						<div class="item" [appAbout]>
+							<mat-card>
+								<!-- <img mat-card-image [attr.src]="blog.src"> -->
+								<mat-card-content>
+									<a href="#blog">
+										<h5 class="mat-headline" [ngStyle.sm]="{'font-size': '16px'}">{{ blog.title }}
+										</h5>
+									</a>
+									<p class="mat-subheading-2" [ngStyle.sm]="{'font-size': '12px'}">
+										{{ blog.description}}
+									</p>
+
+								</mat-card-content>
+							</mat-card>
+						</div>
+					</app-mat-carousel-slide>
+				</ng-container>
+
+			</app-mat-carousel>
 		</div>
+
+
 		<div fxLayout="row" fxLayoutAlign="center center">
-			<button class="customPrevBtn" mat-raised-button color="primary">Prev</button>
-			<button class="customNextBtn" mat-raised-button color="accent">Next</button>
+			<button (click)='matCarousel.previous()' class="customPrevBtn" mat-raised-button color="primary">Prev</button>
+			<button (click)='matCarousel.next()' class="customNextBtn" mat-raised-button color="accent">Next</button>
 		</div>
 	</div>
 </section>

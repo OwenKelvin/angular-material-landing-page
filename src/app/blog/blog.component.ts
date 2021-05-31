@@ -5,14 +5,19 @@ import { Orientation } from '../mat-carousel/carousel';
 @Component({
 	selector: 'app-blog',
 	templateUrl: './blog.component.html',
-	styleUrls: ['./blog.component.css']
+	styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent {
 
 	constructor() { }
-	public slidesList = new Array<never>(5);
+	blogs = [1, 2, 3, 4, 5, 6, 7].map(blog => ({
+		src: `/assets/img/${blog}.jpg`,
+		title: `Article Title #${blog}`,
+		description: 'Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Doloribus numquam quis.'
+	}))
+	public slidesList = new Array<never>(this.blogs.length);
 	public showContent = false;
-  
+
 	public parentHeight = 'auto';
 	public timings = '250ms ease-in';
 	public autoplay = true;
@@ -31,12 +36,7 @@ export class BlogComponent {
 	public useKeyboard = true;
 	public useMouseWheel = false;
 	public orientation: Orientation = 'ltr';
-	public blogs = [
-		{
-			src: 'assets/img/6.jpg',
-			title: 'Article Title #1'
-		}
-	]
+
 
 
 }

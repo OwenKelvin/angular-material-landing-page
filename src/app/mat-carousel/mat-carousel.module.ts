@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { HammerModule } from '@angular/platform-browser';
 import { MatCarouselSlideComponent } from './carousel-slide/carousel-slide.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -16,11 +17,13 @@ import { MatCarouselSlideComponent } from './carousel-slide/carousel-slide.compo
     CommonModule,
     MatButtonModule, 
     MatIconModule, 
-    HammerModule
+    HammerModule,
+    BrowserAnimationsModule
   ],
   exports: [
     MatCarouselComponent,
-    MatCarouselSlideComponent
+    MatCarouselSlideComponent,
+    BrowserAnimationsModule
   ]
 })
 export class MatCarouselModule { }
