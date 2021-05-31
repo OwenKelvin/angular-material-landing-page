@@ -15,6 +15,10 @@ $nglp-theme: mat-light-theme($nglp-primary, $nglp-accent, $nglp-warn);
 
 @import 'animations/nglp-animations.scss';
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ------ scroll off -------- */
 
 .scrollOff{

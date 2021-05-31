@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 export interface Specification {
   item: string;
@@ -10,7 +10,7 @@ export interface Specification {
   templateUrl: './pricing.component.html',
   styleUrls: ['./pricing.component.css']
 })
-export class PricingComponent implements OnInit {
+export class PricingComponent {
 
   isHeading = true;
 
@@ -30,9 +30,6 @@ export class PricingComponent implements OnInit {
 
   getTotalCost() {
     return this.specifications.map(t => t.cost).reduce((acc, value) => acc + value, 0);
-  }
-
-  ngOnInit() {
   }
 
 }

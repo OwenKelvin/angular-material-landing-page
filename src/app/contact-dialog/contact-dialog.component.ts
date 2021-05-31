@@ -43,7 +43,7 @@ export class ContactDialogComponent {
 
   constructor(
     public dialogRef: MatDialogRef<ContactDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
 
   dialogOff(): void {
     this.dialogRef.close();
@@ -51,7 +51,7 @@ export class ContactDialogComponent {
 
   onSubmit() {
 
-  	console.log("FORM SEND");
+    console.log("FORM SEND");
 
   }
 

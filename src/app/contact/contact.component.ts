@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormGroupDirective, NgForm, FormControl, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormGroupDirective, NgForm, FormControl, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { Contact } from './contact';
 
@@ -16,7 +16,7 @@ export class NgLpErrorStateMatcher implements ErrorStateMatcher {
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
 
   nameFormControl = new FormControl('', [
     Validators.required
@@ -38,11 +38,9 @@ export class ContactComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
-
   onSubmit() {
 
-  	console.log("FORM SEND");
+    console.log("FORM SEND");
 
   }
 

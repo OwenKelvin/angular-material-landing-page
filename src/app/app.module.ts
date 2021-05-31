@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+// import { MatCarouselModule } from 'carousel';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,7 +14,6 @@ import { PricingComponent } from './pricing/pricing.component';
 import { Material2Module } from './material-2/material-2.module';
 import { ScrollModule } from './scroll/scroll.module';
 import { HeadingComponent } from './heading/heading.component';
-import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutDirective } from './about/about.directive';

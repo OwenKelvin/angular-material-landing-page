@@ -3,6 +3,19 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@angular-material/carousel": [
+        "dist/angular-material/carousel/angular-material-carousel",
+        "dist/angular-material/carousel"
+      ],
+      "angular-material-carousel": [
+        "dist/angular-material-carousel/angular-material-carousel",
+        "dist/angular-material-carousel"
+      ],
+      "carousel": [
+        "dist/carousel"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,

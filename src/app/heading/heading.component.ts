@@ -5,15 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './heading.component.html',
   styleUrls: ['./heading.component.css']
 })
-export class HeadingComponent implements OnInit {
+export class HeadingComponent {
 
   isHeading = true;
   isSubheading = true;
   isHeadingBtn = true;
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }
