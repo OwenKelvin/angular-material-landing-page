@@ -14,6 +14,7 @@ declare const window: Window;
 })
 
 export class ScrollDirective {
+  @Input('appScroll') scroll: string | undefined = '';
   @Output() public onScroll = new EventEmitter<SE>();
 
   constructor() { }

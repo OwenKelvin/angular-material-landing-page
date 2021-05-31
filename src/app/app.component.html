@@ -28,7 +28,7 @@
     </mat-nav-list>
   </mat-sidenav>
 
-  <mat-sidenav-content appScroll (onScroll)="detectScroll($event)">
+  <mat-sidenav-content [appScroll] (onScroll)="detectScroll($event)">
 
   <app-heading></app-heading>
   <app-about></app-about>
