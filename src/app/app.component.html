@@ -1,6 +1,7 @@
 <mat-toolbar class="navigation-toolbar" [class.navigation-is-mobile]="mobileQuery.matches"
-  [class.mat-elevation-z0]="!isActive" [class.mat-elevation-z8]="isActive" [class.animated-header]="!isActivefadeInDown"
-  [class.fadeInDown]="!isActivefadeInDown" [class.navigation-fixed]="!fixedTolbar">
+             [class.mat-elevation-z0]="!isActive" [class.mat-elevation-z8]="isActive"
+             [class.animated-header]="!isActivefadeInDown"
+             [class.fadeInDown]="!isActivefadeInDown" [class.navigation-fixed]="!fixedTolbar">
   <button fxShow="true" fxShow.gt-xs="false" mat-icon-button (click)="snav.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
@@ -14,7 +15,7 @@
   </mat-nav-list>
   <span class="navigation-spacer"></span>
   <button id=contact-fab-button (click)="openDialog()" mat-mini-fab color="primary" matTooltip="Contact Us"
-    [matTooltipPosition]="'left'">
+          [matTooltipPosition]="'left'">
     <mat-icon>email</mat-icon>
   </button>
 </mat-toolbar>
@@ -23,7 +24,7 @@
 
 <mat-sidenav-container class="navigation-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
   <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
-    (opened)="setToggleOn()" (closed)="setToggleOff()">
+               (opened)="setToggleOn()" (closed)="setToggleOff()">
     <mat-nav-list>
       <a id="mobilelogo" class="logo" fxShow="true" fxShow.gt-xs="false" href="#"><img src="assets/img/logo.png"></a>
       <a mat-list-item href="#about">About</a>

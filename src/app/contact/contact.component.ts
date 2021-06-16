@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroupDirective, NgForm, FormControl, Validators } from '@angular/forms';
+import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { Contact } from './contact';
 
@@ -36,7 +36,8 @@ export class ContactComponent {
   contact = new Contact();
 
 
-  constructor() { }
+  constructor() {
+  }
 
   onSubmit() {
 

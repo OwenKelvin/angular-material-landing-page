@@ -1,16 +1,16 @@
-mat-icon{
-	font-weight: bold;
+mat-icon {
+  font-weight: bold;
 }
 
-.contact-dialog-title{
-	text-align: center;
+.contact-dialog-title {
+  text-align: center;
 }
 
-.dialog-action{
-	width: 100%;
-	margin-top: 20px;
+.dialog-action {
+  width: 100%;
+  margin-top: 20px;
 }
 
-.right-button{
-	margin-left: 50px;
+.right-button {
+  margin-left: 50px;
 }

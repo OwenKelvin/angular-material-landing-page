@@ -5,13 +5,14 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 })
 
 export class AboutDirective {
- 
-  constructor(private el: ElementRef) { }
- 
+
+  constructor(private el: ElementRef) {
+  }
+
   @Input() defaultColor: string = 'red';
- 
+
   @Input('appAbout') about: string | undefined = '';
- 
+
   @HostListener('mouseenter') onMouseEnter() {
     this.setHoverEffect();
   }
@@ -19,7 +20,7 @@ export class AboutDirective {
   @HostListener('mouseleave') onMouseLeave() {
     this.removeHoverEffect();
   }
- 
+
   private setHoverEffect() {
     this.el.nativeElement.classList.add('about-hover-effect');
   }

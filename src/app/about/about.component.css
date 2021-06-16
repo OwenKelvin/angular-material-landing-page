@@ -1,20 +1,20 @@
-.about-section{
+.about-section {
   text-align: center;
 }
 
-.about-heading{
+.about-heading {
   padding-bottom: 30px;
 }
 
-.about-heading h2{
+.about-heading h2 {
   font-size: 32px;
 }
 
-.about-heading h3{
+.about-heading h3 {
   font-size: 22px;
 }
 
-.about-text{
+.about-text {
   text-align: center;
 }
 
@@ -22,7 +22,7 @@
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 68px;  /* Preferred icon size */
+  font-size: 68px; /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;

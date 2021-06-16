@@ -26,7 +26,8 @@ export class PricingComponent {
     {item: '1000mm Wall unit', cost: 205},
   ];
 
-  constructor() { }
+  constructor() {
+  }
 
   getTotalCost() {
     return this.specifications.map(t => t.cost).reduce((acc, value) => acc + value, 0);

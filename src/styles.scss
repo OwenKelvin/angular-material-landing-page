@@ -2,8 +2,8 @@
 @import 'styles/animations/animations.scss';
 
 $ng-primary: mat-palette($mat-grey, 50, 700, 100);
-$ng-accent:  mat-palette($mat-orange, A700);
-$ng-warn:    mat-palette($mat-red, 500);
+$ng-accent: mat-palette($mat-orange, A700);
+$ng-warn: mat-palette($mat-red, 500);
 $ng-theme: mat-light-theme($ng-primary, $ng-accent, $ng-warn);
 
 @include mat-core();
@@ -16,15 +16,15 @@ html {
 
 /* ------ scroll off -------- */
 
-.scrollOff{
-	overflow: hidden !important;
+.scrollOff {
+  overflow: hidden !important;
 }
 
 /* ------ section -------- */
 
-section{
-	margin-top: 135px;
-	margin-bottom: 135px;
+section {
+  margin-top: 135px;
+  margin-bottom: 135px;
 }
 
 /* ------ icons -------- */
@@ -33,7 +33,7 @@ section{
   color: mat-color($ng-accent, 700);
 }
 
-.text-muted{
+.text-muted {
   color: mat-color($ng-accent, A700);
 }
 
@@ -45,21 +45,21 @@ section{
 
 /* ------ mobile logo -------- */
 
-#mobilelogo{
+#mobilelogo {
   margin-top: 56px;
 }
 
 /* ------ about hover effect -------- */
 
-.about-hover-effect{
+.about-hover-effect {
   @include mat-elevation-transition;
   @include mat-elevation(8);
 }
 
-.about-hover-effect .mat-card{
+.about-hover-effect .mat-card {
   background-color: mat-color($ng-accent, 100);
 }
 
-.about-hover-effect i{
+.about-hover-effect i {
   color: mat-color($ng-accent, A700);
 }

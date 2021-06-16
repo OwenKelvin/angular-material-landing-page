@@ -1,4 +1,4 @@
-import { Directive, HostListener, Output, EventEmitter, Input } from '@angular/core';
+import { Directive, EventEmitter, HostListener, Input, Output } from '@angular/core';
 
 export type SE = {
 
@@ -17,15 +17,18 @@ export class ScrollDirective {
   @Input('appScroll') scroll: string | undefined = '';
   @Output() public scrollChange = new EventEmitter<SE>();
 
-  constructor() { }
+  constructor() {
+  }
 
 
-  @HostListener('scroll', ['$event']) public scrolled($event: Event) {
+  @HostListener('scroll', ['$event'])
+  public scrolled($event: Event) {
     this.elementSE($event);
   }
 
 
-  @HostListener('window:scroll', ['$event']) public windowScrolled($event: Event) {
+  @HostListener('window:scroll', ['$event'])
+  public windowScrolled($event: Event) {
     this.windowSE($event);
   }
 
@@ -34,7 +37,7 @@ export class ScrollDirective {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     const header = scrollTop < 200;
     const bottom = scrollTop > 200;
-    const emitVal: SE = { header, bottom };
+    const emitVal: SE = {header, bottom};
     this.scrollChange.emit(emitVal);
   }
 
@@ -42,7 +45,7 @@ export class ScrollDirective {
     const target = <HTMLElement>$event.target;
     const header = target.scrollTop < 200;
     const bottom = target.scrollTop > 200;
-    const emitVal: SE = { header, bottom };
+    const emitVal: SE = {header, bottom};
     this.scrollChange.emit(emitVal);
   }
 

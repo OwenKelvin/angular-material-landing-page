@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ScrollDirective } from './scroll.directive';
 
 
-
 @NgModule({
   declarations: [
     ScrollDirective
@@ -15,4 +14,5 @@ import { ScrollDirective } from './scroll.directive';
     ScrollDirective
   ]
 })
-export class ScrollModule { }
+export class ScrollModule {
+}

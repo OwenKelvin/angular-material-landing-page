@@ -15,8 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     CommonModule,
-    MatButtonModule, 
-    MatIconModule, 
+    MatButtonModule,
+    MatIconModule,
     HammerModule,
     BrowserAnimationsModule
   ],
@@ -26,4 +26,5 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule
   ]
 })
-export class MatCarouselModule { }
+export class MatCarouselModule {
+}

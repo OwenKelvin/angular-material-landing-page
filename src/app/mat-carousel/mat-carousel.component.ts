@@ -1,4 +1,4 @@
-import { animate, style, AnimationBuilder } from '@angular/animations';
+import { animate, AnimationBuilder, style } from '@angular/animations';
 import { ListKeyManager } from '@angular/cdk/a11y';
 import { isPlatformBrowser } from '@angular/common';
 import {
@@ -20,7 +20,7 @@ import {
   ViewChild
 } from '@angular/core';
 import { ThemePalette } from '@angular/material/core';
-import { interval, BehaviorSubject, Observable, Subject, of } from 'rxjs';
+import { BehaviorSubject, interval, Observable, of, Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 
 import { MatCarousel, Orientation, SvgIconOverrides } from './carousel';
@@ -56,6 +56,7 @@ export class MatCarouselComponent
   public get loop(): boolean {
     return this._loop;
   }
+
   @Input()
   public set loop(value: boolean) {
     this.loop$.next(value);
@@ -70,6 +71,7 @@ export class MatCarouselComponent
   public get maxWidth(): string {
     return this._maxWidth;
   }
+
   @Input()
   public set maxWidth(value: string) {
     this._maxWidth = value;
@@ -91,6 +93,7 @@ export class MatCarouselComponent
   public get orientation(): Orientation {
     return this._orientation;
   }
+
   @Input()
   public set orientation(value: Orientation) {
     this.orientation$.next(value);
@@ -110,6 +113,7 @@ export class MatCarouselComponent
 
     return 0;
   }
+
   public get currentSlide(): MatCarouselSlideComponent | null {
     if (this.listKeyManager) {
       return this.listKeyManager.activeItem;
@@ -118,12 +122,8 @@ export class MatCarouselComponent
     return null;
   }
 
-  @ContentChildren(MatCarouselSlideComponent) public slidesList: QueryList<
-    MatCarouselSlideComponent
-  > = new QueryList();
-  @ViewChild('carouselContainer') private carouselContainer: ElementRef<
-    HTMLDivElement
-  > = new ElementRef(document.createElement('div'));
+  @ContentChildren(MatCarouselSlideComponent) public slidesList: QueryList<MatCarouselSlideComponent> = new QueryList();
+  @ViewChild('carouselContainer') private carouselContainer: ElementRef<HTMLDivElement> = new ElementRef(document.createElement('div'));
   @ViewChild('carouselList') private carouselList: ElementRef<HTMLElement> | undefined;
   public listKeyManager: ListKeyManager<MatCarouselSlideComponent> | undefined;
 
@@ -152,7 +152,8 @@ export class MatCarouselComponent
     private animationBuilder: AnimationBuilder,
     private renderer: Renderer2,
     @Inject(PLATFORM_ID) private platformId: InjectionToken<any>
-  ) {}
+  ) {
+  }
 
   public ngAfterContentInit(): void {
     this.listKeyManager = new ListKeyManager(this.slidesList)
@@ -224,14 +225,14 @@ export class MatCarouselComponent
 
   @HostListener('mouseenter')
   public onMouseEnter(): void {
-    if(this.pauseOnHover){
+    if (this.pauseOnHover) {
       this.stopTimer();
     }
   }
 
   @HostListener('mouseleave')
   public onMouseLeave(): void {
-    if(this.pauseOnHover){
+    if (this.pauseOnHover) {
       this.startTimer(this._autoplay);
     }
   }
@@ -360,14 +361,14 @@ export class MatCarouselComponent
   private playAnimation(): void {
     const translation = this.getTranslation(this.getOffset());
     const factory = this.animationBuilder.build(
-      animate(this.timings, style({ transform: translation }))
+      animate(this.timings, style({transform: translation}))
     );
     const animation = factory.create(this.carouselList!.nativeElement);
 
     animation.onStart(() => {
       this.playing = true;
       this.animationStart.emit(this.currentIndex);
-  });
+    });
     animation.onDone(() => {
       this.slideChange.emit(this.currentIndex);
       this.playing = false;

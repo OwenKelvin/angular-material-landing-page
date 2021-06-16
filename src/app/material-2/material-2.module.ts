@@ -16,11 +16,12 @@ import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
 
-  imports: [MatButtonModule, MatCheckboxModule, MatCardModule, MatDividerModule, MatIconModule, 
-            MatSidenavModule, MatToolbarModule, MatListModule, MatTooltipModule, MatTabsModule, 
-            MatTableModule, MatFormFieldModule, MatInputModule, MatDialogModule],
-  exports: [MatButtonModule, MatCheckboxModule, MatCardModule, MatDividerModule, MatIconModule, 
-            MatSidenavModule, MatToolbarModule, MatListModule, MatTooltipModule, MatTabsModule, 
-            MatTableModule, MatFormFieldModule, MatInputModule, MatDialogModule]
+  imports: [MatButtonModule, MatCheckboxModule, MatCardModule, MatDividerModule, MatIconModule,
+    MatSidenavModule, MatToolbarModule, MatListModule, MatTooltipModule, MatTabsModule,
+    MatTableModule, MatFormFieldModule, MatInputModule, MatDialogModule],
+  exports: [MatButtonModule, MatCheckboxModule, MatCardModule, MatDividerModule, MatIconModule,
+    MatSidenavModule, MatToolbarModule, MatListModule, MatTooltipModule, MatTabsModule,
+    MatTableModule, MatFormFieldModule, MatInputModule, MatDialogModule]
 })
-export class Material2Module { }
+export class Material2Module {
+}
