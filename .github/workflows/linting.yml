@@ -1,0 +1,24 @@
+name: Linting
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main, develop]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - uses: actions/cache@v2
+      with:
+        path: '**/node_modules'
+        key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+
+    - uses: actions/setup-node@v1 #this will install Node and npm on Ubuntu
+      with:
+        node-version: '14.x'
+    - run: npm install
+    - run: npm i -g @angular/cli
+    - run: npm run lint --fix
